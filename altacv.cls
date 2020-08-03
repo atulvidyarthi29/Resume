@@ -119,12 +119,17 @@
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
   \smallskip
-  \textbf{\color{accent}#2}\par
+  #2\par
   \smallskip
   {\small\makebox[0.5\linewidth][l]{\faCalendar \hspace{0.5em}#3}%
   \ifstrequal{#4}{}{}{\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}\par}
   \medskip
 }
+
+\newcommand{\cvproject}[2]{%
+  {\large\color{emphasis}\textbf{#1}\par}
+}
+
 
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
