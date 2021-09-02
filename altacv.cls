@@ -127,7 +127,7 @@
 }
 
 \newcommand{\cvproject}[2]{%
-  {\large\color{emphasis}\textbf{#1}\par}
+  {\large\color{emphasis}\textbf{#1}\par\smallskip}
 }
 
 

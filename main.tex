@@ -3,16 +3,16 @@
 \documentclass[10pt,a4paper]{altacv}
 
 %Layout
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.0cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+\geometry{left=1cm,right=11.5cm,marginparwidth=9.7cm,marginparsep=0.8cm,top=1cm,bottom=1.25cm,footskip=2\baselineskip}
 
 %Packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
 \usepackage{hyperref}
+\usepackage[document]{ragged2e}
 
 %Colors
-
 \definecolor{accent}{HTML}{000e17}
 \definecolor{heading}{HTML}{000060}
 \definecolor{emphasis}{HTML}{000e17}
@@ -26,45 +26,37 @@
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 
-%
-
 \usepackage{tikz}
 \usepackage{kpfonts}
 \usepackage[explicit]{titlesec}
+\usepackage{marvosym}
+\usepackage{url}
+
 \newcommand*\chapterlabel{}
-
-
-
-
-
-
 
 
 
 
 \begin{document}
 \name{Atul Vidyarthi}
-\tagline{Software Developer | Backend Developer | Android Developer}
+\tagline{Analyst at Deloitte India (Offices of the US)}
 % \photo{3.0cm}{profilePic/IMG_20171026_004500_702.jpg}
 \personalinfo{
-    \faBirthdayCake \enspace{29th Jan 1999}\quad
+    \faBirthdayCake \enspace{29th January, 1999}\quad
     \faEnvelope \enspace{atulvidyarthi29@gmail.com}\quad
-    \faPhone{+91-8309926308}\quad
-    \location{Patna, Bihar}
-    \linkedin{linkedin.com/in/atul-vidyarthi-320a18150}
-    \github{github.com/atulvidyarthi29}
-    \faFacebook \enspace facebook.com/atul.vidyarthi.50 \quad
+    \faPhone{+91-8309926308}\quad \location{Patna, Bihar}
+    \github{\href{https://github.com/atulvidyarthi29}{github.com/atulvidyarthi29}}
+    \homepage{\href{http://atulvidyarthi29.github.io/}{atulvidyarthi29.github.io/}}
+    \linkedin{\href{https://linkedin.com/in/atulvidyarthi29}{linkedin.com/in/atulvidyarthi29}}
+    
+    % \faFacebook \enspace \href{https://facebook.com/atul.vidyarthi.50}{facebook.com/atul.vidyarthi.50} \quad
     % \faTwitter \enspace twitter.com/gcoderx \quad\quad
-    \homepage{codechef.com/users/atul\_vidyarthi}
+    
 }
-
-%
 
 \begin{fullwidth}
 \makecvheader
 \end{fullwidth}
-
-%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -74,125 +66,98 @@
 %Experience 1
 %%%%%%%%%%%%%
 
-\cvevent{\textbf{Python Programmer}}{Center of Excellence in Wireless Technology }{May 2020 -- July 2020}{Work from Home}
+\cvevent{\textbf{Analyst}}{Deloitte USI}{June\textquotesingle21 -- Present}{Hyderabad}
+\begin{itemize}
+    \item Part of the Tax channel under Enabling Areas. 
+\end{itemize}
+\medskip
 
+\cvevent{\textbf{Intern}}{CEWiT}{May\textquotesingle20 -- Jul\textquotesingle20}{Chennai}
+
+\begin{itemize}
+    \item Developed a testing module for the 5g core network using Flask.
+\end{itemize}
+\medskip
+
+\cvevent{\textbf{Teaching Assistant}}{Indian Institute of Information Technology, Sricity}{Aug\textquotesingle19 -- Nov\textquotesingle19}{Chitoor, Andhra Pradesh}
 \begin{itemize}
     \setlength{\itemindent}{0.5em}
-    \item[--]   \small{Built up a framework in Flask from scratch to implement the idea of introducing errors in 5g core network}
-\end{itemize}
-\medskip
-
-\cvevent{\textbf{Teaching Assistant for the course Overview of Computers}}{Indian Institute of Information Technology, Sricity}{August 2019 -- November 2019}{Chitoor, Andhra Pradesh}
-
-\begin{itemize}
-    \setlength{\itemindent}{0.5em}
-    \item[--]   \small{Taught topics such as assembly programming, linux and bash scripting, latex and Arduino to the students and conducted their lab sessions}
+    \item \justify Taught topics such as assembly programming, linux and bash scripting, LaTeX and Arduino to the students and conducted their lab sessions
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\edu}[2]{%
+  {\large\color{emphasis}\textbf{#1}\par}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{
+  \color{accent}#2\par
+  \smallskip}
+  \normalsize
+}
+
+
+
+\cvsection{Education}
+
+\edu{\href{http://www.iiits.ac.in/}{Indian Institute of Information Technology, Sricity}}{Bachelor of Technology \hspace{6} CGPA- 8.16}
+\medskip
+\medskip
+\edu{\href{http://www.stmichaelspatna.edu.in/}{St. Michael's High School, Digha, Patna}}{Intermediate \hspace{6} CBSE - 89.4\% }
+\medskip
+\medskip
+\edu{St. Paul's High School, Digha, Patna}{Matriculation \hspace{6} ICSE - 97.2 \% }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Strengths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Technical Skills}
+
+% \textbf{\large Technical Skills}
+% \par
+% \medskip
+
+\textbf{Java Frameworks and Libraries}
+\par\smallskip\smallskip
+\cvtag{Spring Boot} \cvtag{Spring Security}  \cvtag{Spring Cloud} \cvtag{JPA}  \cvtag{Eureka}\cvtag{JDBC} 
 \medskip
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Projects %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\cvsection[page2sidebar]{Projects}
-
-
-%%%%%%%%%%%%%
-%Project 1
-%%%%%%%%%%%%%
-
-\cvproject{Haven - A Crime Tipping and Reporting Portal}
-
-\begin{itemize}
-  \item An ongoing project in Spring Boot allowing the users to seek help from the community. The users can choose to be anonymous.
-  \item We have journalists to check the veracity of the post and authorities to take action on any case.
-  \item We have a language translator for effective communication. We'll build up a speech-to-text converter and a crime-classifier for various crime types. 
-\end{itemize}
+\textbf{Python Web Frameworks}
+\par\smallskip
+\cvtag{Django} \cvtag{Django REST} \cvtag{Flask}
 \medskip
+
+% \textbf{Databases}
+% \par\smallskip
+% \cvtag{MySQL} \cvtag{Postgres}
 % \medskip
 
+% \textbf{Mobile Apps} 
+% \par\smallskip
+% \cvtag{Flutter and Dart}
+% \medskip
 
-
-
-%%%%%%%%%%%%%
-%Project 2
-%%%%%%%%%%%%%
-
-\cvproject{KudaBin - A Waste Management App}
-
-\begin{itemize}
-  \item Made a Flutter app with backend in Node JS communicating on REST APIs to manage the sewage-collecting vehicles
-  \item Customers could track the vehicle on Google Map and also submit a feedback on successful pick-up or report about the garbage dumped at some location which needs cleaning
-\end{itemize}
+\textbf{Cloud}
+\par\smallskip\smallskip
+\cvtag{Amazon Web Services (AWS)} \cvtag{Firebase}\cvtag{Heroku}
 \medskip
-% \medskip
 
-%%%%%%%%%%%%%
-%Project 3
-%%%%%%%%%%%%%
-
-\cvproject{BlueTech ERP - An Enterprise Resource Planning Software}
-
-\begin{itemize}
-  \item Developed a centralized business management software for three departments of a company- Accounting, Sales and HR using Django and had an integrated Flutter app with the help of REST APIs
-\end{itemize}
+\textbf{Other Tools\smallskip}
+\par\smallskip
+\cvtag{Pega} \cvtag{Flutter}
+\cvtag{MySQL} \cvtag{Postgres}
+\cvtag{Linux} \cvtag{Git}
 \medskip
-% \medskip
+
+\textbf{Domain Skill\smallskip}
+\par\smallskip
+\cvtag{Web Development} \cvtag{Microservice Architecture} \cvtag{Information Retrieval} \cvtag{Web Scraping}
 
 
-%%%%%%%%%%%%%
-%Project 4
-%%%%%%%%%%%%%
-
-\cvproject{Carpool - A Car Rental Website as a Serverless Website}
-
-\begin{itemize}
-  \item Used AWS services like Amazon Cognito, Dynamodb, CloudFront, Amazon Lambda, Amazon Lex, Amazon S3 and AWS IAM and deployed using Zappa    
-\end{itemize}
-\medskip
-% \medskip
-
-
-%%%%%%%%%%%%%
-%Project 5
-%%%%%%%%%%%%%
-
-% \cvproject{Echo - A Music Player}
-
-% \begin{itemize}
-%   \item Made a Kotlin App which can play songs from the device with shake-to-change the song feature and a cool visualizer
-% \end{itemize}
-% \medskip
-% \medskip
-
-%%%%%%%%%%%%%
-%Project 6
-%%%%%%%%%%%%%
-
-\cvproject{Digital College - A Learning Management System}
-
-\begin{itemize}
-  \item Made a Django application with materialized CSS for UI to serve as a platform for student-teacher interaction, club-related activities, displaying of grades, course planning, conducting quizzes and forum
-\end{itemize}
-\medskip
-% \medskip
-
-
-
-
-%%%%%%%%%%%%%
-%Project 7
-%%%%%%%%%%%%%
-
-\cvproject{Smart Home - Simple Solutions}
-
-\begin{itemize}
-  \item Used arduino to make a smart blind which would open automatically during the day and close at night making use of LDR circuit with motors. 
-  \item Also, made an LPG gas detector to alarm the users on the smartphone if there was a leakage. Used thingspeak to connect the mobile App.
-  \item Made a Bluetooth controlled door lock. 
-\end{itemize}
-\medskip
-% \medskip
-Other works on Github
+% \cvsection{Soft Skills}
+% % \textbf{\large Soft Skills}
+% % \par
+% % \medskip
+% \cvtag{Adaptability} \cvtag{Ability to work under pressure}\par\cvtag{Diligence}
 
 \end{document}
